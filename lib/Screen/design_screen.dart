@@ -24,10 +24,10 @@ class UIdesignScreen extends StatelessWidget {
                     child: Column(
                       children: [
                         const SizedBox(
-                          height: 20,
+                          height: 10,
                         ),
                         Container(
-                          height: 130,
+                          height: 120,
                           width: double.infinity,
                           decoration: BoxDecoration(
                             color:const Color(0xffE7ECEf),
@@ -80,7 +80,7 @@ class UIdesignScreen extends StatelessWidget {
                             ),
                           ),
                         ),
-                        const SizedBox(height: 20,),
+                        const SizedBox(height: 18,),
                         Row(
                           children: [
                             Container(
@@ -208,7 +208,7 @@ class UIdesignScreen extends StatelessWidget {
                             )
                           ],
                         ),
-                        const SizedBox(height: 20,),
+                        const SizedBox(height: 18,),
                         Container(
                           height: 100,
                           width: double.infinity,
@@ -275,7 +275,7 @@ class UIdesignScreen extends StatelessWidget {
                             ],
                           ),
                         ),
-                        const SizedBox(height: 20,),
+                        const SizedBox(height: 18,),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -412,7 +412,7 @@ class UIdesignScreen extends StatelessWidget {
                                     child: Center (
                                       child: Column(
                                         children: [
-                                          SizedBox(
+                                          const SizedBox(
                                             height: 10),
                                           Row(
                                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -424,20 +424,232 @@ class UIdesignScreen extends StatelessWidget {
                                                 child: ClipOval(
                                                   child: Image.asset(
                                                     'Image/cloudy.jpeg',
-                                                    fit: BoxFit.cover, // You can adjust the BoxFit based on your needs
+                                                    fit: BoxFit.cover,
                                                   ),
                                                 ),
                                               ),
-                                              Text('30c\nSebagian Cerah',style: TextStyle(fontSize: 12),)
+                                              const Text('30c\nSebagian Cerah',style: TextStyle(fontSize: 12),)
                                             ],
                                           ),
+                                          const SizedBox(height: 14,),
+                                          const Row(
+                                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              Icon(Icons.location_on),
+                                              Text('Banani,Dhaka.\nBangldesh',style:TextStyle(
+                                                fontSize: 12,fontWeight: FontWeight.bold
+                                              ) ,)
+                                            ],
+                                          )
                                         ],
                                       ),
                                     ),
+                                  ),
+
+                                  const SizedBox(height: 30,),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Container(
+                                        height: 220,
+                                        width: MediaQuery.of(context).size.width*.2,
+                                        decoration: BoxDecoration(
+                                          color: Palette.boxDecoration,
+                                          borderRadius: BorderRadius.circular(15),
+                                          boxShadow: const[
+                                            BoxShadow(
+                                              color: Palette.boxShadow1,
+                                              offset: Offset(6, 7),
+                                              blurRadius: 5,
+                                              spreadRadius: 1,
+                                              inset: true
+                                            ),
+                                            BoxShadow(
+                                                color: Palette.boxShadow2,
+                                                offset: Offset(-8,-8),
+                                                blurRadius: 5,
+                                                spreadRadius: 1,
+                                                inset: true
+                                            )
+                                          ]
+                                        ),
+                                        child: Column(
+                                          children: [
+                                            Expanded(child: Text('')),
+                                            Expanded(
+                                              flex: 2,
+                                              child: Container(
+                                                decoration: BoxDecoration(
+                                                  color: Colors.blueAccent.shade200,
+                                                  borderRadius: BorderRadius.only(
+                                                    topLeft: Radius.circular(25),
+                                                    topRight: Radius.circular(25),
+                                                    bottomLeft: Radius.circular(15),
+                                                    bottomRight: Radius.circular(15),
+                                                  ),
+                                                ),
+                                                child: const Padding(
+                                                    padding: EdgeInsets.only(top: 28),
+                                                  child: Center(
+                                                    child: Text('75%',style: TextStyle(
+                                                        fontWeight: FontWeight.bold,color: Colors.white),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      const SizedBox(width: 20,),
+                                      Container(
+                                        height: 220,
+                                        width: MediaQuery.of(context).size.width*.2,
+                                        decoration: BoxDecoration(
+                                            color: Palette.boxDecoration,
+                                            borderRadius: BorderRadius.circular(15),
+                                            boxShadow: const[
+                                              BoxShadow(
+                                                  color: Palette.boxShadow1,
+                                                  offset: Offset(6, 7),
+                                                  blurRadius: 5,
+                                                  spreadRadius: 1,
+                                                  inset: true
+                                              ),
+                                              BoxShadow(
+                                                  color: Palette.boxShadow2,
+                                                  offset: Offset(-8,-8),
+                                                  blurRadius: 5,
+                                                  spreadRadius: 1,
+                                                  inset: true
+                                              )
+                                            ]
+                                        ),
+                                        child: Column(
+                                          children: [
+                                            const Expanded(child: Text('')),
+                                            Expanded(
+                                              child: Container(
+                                                decoration: BoxDecoration(
+                                                  color: Colors.blueAccent.shade200,
+                                                  borderRadius: const BorderRadius.only(
+                                                    topLeft: Radius.circular(25),
+                                                    topRight: Radius.circular(25),
+                                                    bottomLeft: Radius.circular(15),
+                                                    bottomRight: Radius.circular(15),
+                                                  ),
+                                                ),
+                                                child: const Padding(
+                                                  padding: EdgeInsets.only(top: 28),
+                                                  child: Center(
+                                                    child: RotatedBox(quarterTurns: 3,
+                                                    child: Icon(Icons.battery_2_bar,size: 30,
+                                                    color: Colors.white,
+                                                    ),
+                                                    )
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
                                   )
                                 ],
                               ),
                             ),
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 15,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Container(
+                              height: 70,
+                              width: 70,
+                              decoration: BoxDecoration(
+                                color: Palette.boxDecoration,
+                                borderRadius: BorderRadius.circular(15),
+                                boxShadow: const [
+                                    BoxShadow(
+                                    color: Palette.boxShadow1,
+                                    offset: Offset(4,4),
+                                    blurRadius: 1,
+                                    spreadRadius: 1,
+                                    inset: true
+                                  ),
+                                  BoxShadow(
+                                      color: Palette.boxShadow2,
+                                      offset: Offset(-4,-4),
+                                      blurRadius: 1,
+                                      spreadRadius: 1,
+                                      inset: true
+                                  )
+                                ]
+                              ),
+                              child: Center(
+                                child: Icon(Icons.stop,size: 50,color: Colors.grey.shade700,),
+                              ),
+                            ),
+                            Container(
+                              height: 70,
+                              width: 70,
+                              decoration: BoxDecoration(
+                                  color: Palette.boxDecoration,
+                                  borderRadius: BorderRadius.circular(15),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                        color: Palette.boxShadow1,
+                                        offset: Offset(4,4),
+                                        blurRadius: 1,
+                                        spreadRadius: 1,
+                                        inset: true
+                                    ),
+                                    BoxShadow(
+                                        color: Palette.boxShadow2,
+                                        offset: Offset(-4,-4),
+                                        blurRadius: 1,
+                                        spreadRadius: 1,
+                                        inset: true
+                                    )
+                                  ]
+                              ),
+                              child: Center(
+                                child: Icon(Icons.home_sharp,size: 50,color: Colors.grey.shade700,),
+                              ),
+                            ),
+                            Container(
+                              height: 70,
+                              width: 70,
+                              decoration: BoxDecoration(
+                                  color: Palette.boxDecoration,
+                                  borderRadius: BorderRadius.circular(15),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                        color: Palette.boxShadow1,
+                                        offset: Offset(4,4),
+                                        blurRadius: 1,
+                                        spreadRadius: 1,
+                                        inset: true
+                                    ),
+                                    BoxShadow(
+                                        color: Palette.boxShadow2,
+                                        offset: Offset(-4,-4),
+                                        blurRadius: 1,
+                                        spreadRadius: 1,
+                                        inset: true
+                                    )
+                                  ]
+                              ),
+                              child: Center(
+                                child: Icon(Icons.play_arrow,size: 50,color: Colors.grey.shade700,),
+                              ),
+                            ),
+
                           ],
                         )
                       ],
